@@ -1,0 +1,224 @@
+Delivered-To: [email removed]
+Received: by 2002:ab3:5e05:0:b0:274:946:8a26 with SMTP id w5csp760322ltb; Fri, 4 Oct 2024 16:10:08 -0700 (PDT)
+X-Forwarded-Encrypted: i=4; AJvYcCV1OZEX+uxLX+QpU/PPPuVG6EP06XUiDvoplBsF9+5myNyhNtbVwn/zrhr+on1VUnB/D7MotfX+86bHcy79GA==@gmail.com
+X-Received: by 2002:a05:6870:4724:b0:270:2c3:f362 with SMTP id 586e51a60fabf-287c228bd35mr3904009fac.32.1728083407722; Fri, 04 Oct 2024 16:10:07 -0700 (PDT)
+ARC-Seal: i=3; a=rsa-sha256; t=1728083407; cv=pass; d=google.com; s=arc-20240605; b=lzQQIO7G/meUI5sLLI5cpPOysn1ZCHOElECinbkXCis1tEGwoCcumSVT8nAFrObqG9 covFuUUJ5kbeHoagf44TQOJVGoKAQSw+9T8hzFKU7y2mf2rEByNl0qX1IZBHRLHKqOpw 177b7nEsWq1LyDvKrl8fxCa44ZNzMLgVSzZUwylGF39LZ45p7qmDoHIwNVvbx7lEajI6 82cDjDtOXaP6JStCENNuJu6bGF2Dai2f9VqSEVEEQM675YlXknrk2dkpZy3lDSLO2qzJ 5jkLkJkD8u2DDs6vgiXR7GXBImIhGbIncCJgw98Fik2BZQaAXkR2AFDZMGXbZke6Y4pg SFew==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605; h=to:subject:message-id:date:from:in-reply-to:references:mime-version :dkim-signature:delivered-to; bh=R9Hdb1IrGcdyaBgdr1JCPmcazEImyB8MEn2GO03CHu0=; fh=KPSX4SlfqBZILDizmUK0yDnYcJ69Td8TPaHD3TbpMX0=; b=FSlya7LN1/zfwQCz6/NuL862ubp+iixSUaW0fDrTqsGYQCrL26s48ENmVazgbyIkGY ws/5hVbwgZfQGxRdYzKtvBlttifuyk1b8ZpQy5a0/xeKI3nWDMWGdgj0l1YRapSfbGvo 7VF59pb0uRHuBOMtR/Z5PenAv+Nrbj1GbgDUa/hZVTQY28vbe9ublBJ8/EIgYHjyqPoF V3yXxFEVlM9MQMh5rxTAlqo2V0/5MiEuFKNqnUXaQts2S77090pZVKCRnzcWFnrjJ8nT KlnLpchuOfuM7/rU9PUTXQAYh9CUQlMrAlmIQRynUL99VbEofL5RJR9p3dP1IePge/c1 mAuA==; dara=google.com
+ARC-Authentication-Results: i=3; mx.google.com; dkim=pass header.i=@kw.com header.s=google-feb2017 header.b=mZ1LrldU; arc=pass (i=2 spf=pass spfdomain=kw.com dkim=pass dkdomain=kw.com dmarc=pass fromdomain=kw.com); spf=pass (google.com: domain of [email removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom="[email removed]"; dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=kw.com; dara=pass header.i=@gmail.com
+Return-Path: <[email removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41]) by mx.google.com with SMTPS id 586e51a60fabf-287d73911ccsor214644fac.20.2024.10.04.16.10.07 for <[email removed]> (Google Transport Security); Fri, 04 Oct 2024 16:10:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [email removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com; dkim=pass header.i=@kw.com header.s=google-feb2017 header.b=mZ1LrldU; arc=pass (i=2 spf=pass spfdomain=kw.com dkim=pass dkdomain=kw.com dmarc=pass fromdomain=kw.com); spf=pass (google.com: domain of [email removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom="[email removed]"; dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=kw.com; dara=pass header.i=@gmail.com
+ARC-Seal: i=2; a=rsa-sha256; t=1728083407; cv=pass; d=google.com; s=arc-20240605; b=bNFB6KyZVMk8T1puZfMWIHp41toJAnzgpXz/rl3RlifDVBkrT1C1W5SUMdksmPsGie GCxRQU+8K9vhBRfGyoQBBEuhd50ktV+NSHOOhHqDejD8GSCEQwRkRjcWfFjHQy/Y9GM2 QGblMwoX52W8g+5FYOzO2sD+IpvmoxWjdzwwshBmQGe75Sqqmde2zw1ntgZ7P1T8Xa4w VOTYiiMOW6jYc30L7Tns02k6gtagzrcriq4aCU9GRXtH8WINZri7THVornYwwUaDRPIV vg3+RR++j3ACyQautoEwdxI+FlrQQ07Rj2v1CkLpHGNr8likLRQNWzxTgJb6jK3stAgZ jHYg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605; h=to:subject:message-id:date:from:in-reply-to:references:mime-version :dkim-signature:delivered-to; bh=R9Hdb1IrGcdyaBgdr1JCPmcazEImyB8MEn2GO03CHu0=; fh=KPSX4SlfqBZILDizmUK0yDnYcJ69Td8TPaHD3TbpMX0=; b=k3EmE49uXqfpHtDeMKbeoxSSR/R55HxvEWLCSlaUONfCr92qc9uHohqFgeMSdboiHn yW5x+UPKXlYP3zNlkOJsQ0nQaGZL9u1TJiLAceo7EnpCARqiSbSe6chPWLApdFqdiSBC NBoYu3RhLY3+7mHIskqzMerS3EMXGesUsOWaADJAq+vy4YxxDKG/rKn7kzNAbxLQ24TS EOL+Fj8pXRt7kYspap0R3TyCvQY7i+lGqIYTeVk2A7JIG9n6vYh1AvVmyZdjvBOYKJm6 Zp3jzV7YvLl7n59Ymtr9KZca4JFIf1zQ4YJ8vl1D+rMtyY9J1IAtqAC/7L2i4pEDpAwi jBYA==; dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com; dkim=pass header.i=@kw.com header.s=google-feb2017 header.b=mZ1LrldU; spf=pass (google.com: domain of amelia.campbell@kw.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=amelia.campbell@kw.com; dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=kw.com; dara=pass header.i=@gmail.com
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20230601; t=1728083407; x=1728688207; h=to:subject:message-id:date:from:in-reply-to:references:mime-version :dkim-signature:delivered-to:x-forwarded-for:x-forwarded-to :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to; bh=R9Hdb1IrGcdyaBgdr1JCPmcazEImyB8MEn2GO03CHu0=; b=UEDox3PQuGU9vlYzI0Wfd0rP/L/8xhvLqnt4idj48JwHu6NwOXDM+AUn64tjmL/9vA aRXf00lO8Ifc6+QrvZYxJ5+xIvWGAPVBwRZZX8ee7LYoxAF7rzeLdovqcaTc9oW30bLO SYwu4fBMvnTAOIH3t4VRVp2nTFIdR20RxelRxEh2iB7+XdU2ozv8apgKOir3twRsyDSF GhMqCWBOuRa2444YyOipZmjgFX/6VA4kYlpTk8W+IMNXGNMbTQC9XRkk7bBI6cRiNj2M UuddeZsHi8oAp1Aw2x4rXis6NW9zcwYwqyWC6fcm4GwuGzc5EsjuxWW572uJJ+9auVl7 OkAw==
+X-Forwarded-Encrypted: i=2; AJvYcCWXoFRqWgifkw6VPSK/yA/itdAPx0k4oFzh0zQ2KZV7n/wyXauT5I3bLBYR2H63HnBLo+a+NUMKUYRuaYj4LQ==@gmail.com
+X-Gm-Message-State: AOJu0YxK2g1xgQlolM6EqeAqnuqezlgUWX6v6cxG9wa46pcQeNivXnVU 0yUmy5S1EVAeuE9rXN5rxppNj8usu5j6BsjHMz+Bp5f48S1fWQxMRz0n00g9UCRloCA/JTBlqhF BiAb0YHVg2BNcSSf7gSM+SBsWwqet2UMcjfrVBGhXgcKcbH4/gMpUXv5wEA==
+X-Received: by 2002:a05:6870:96aa:b0:277:e7bc:69fd with SMTP id 586e51a60fabf-287c1dafc27mr4058344fac.13.1728083407212; Fri, 04 Oct 2024 16:10:07 -0700 (PDT)
+X-Forwarded-To: [email removed]
+X-Forwarded-For: [email removed] [email removed]
+Delivered-To: [email removed]
+Received: by 2002:a17:504:8004:b0:1be7:bb18:5301 with SMTP id c4csp682898njh; Fri, 4 Oct 2024 16:10:05 -0700 (PDT)
+X-Received: by 2002:a05:6102:c05:b0:4a3:e3f5:2766 with SMTP id ada2fe7eead31-4a40578d944mr5013162137.16.1728083405085; Fri, 04 Oct 2024 16:10:05 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1728083405; cv=none; d=google.com; s=arc-20240605; b=NbKb4iD2WgN7wJ/OAQXrLwNSpjc8yBpmWzmz1ou8FW6Kd265qU74tjjuw4YAAm61Tw Ys0A6Br9ELvnivkT5LYzPGVISQxisXyJFh586ltffa0K4unBesoZW4b4OPuV8hpYWeCO B9sauCsBJQZiyNF1AYkUsaoJKIzrWkmra9nxTBRniGApTrQYdHRh312pTHptW6J7LJz/ VLFZIpMo+cIXzC6sI3GxHqIateneUyyf2TjU9gWmy6t3IjfoFO2mWaIbyMNmsZAJGiCL uogWodpE+PzWSSh01B3S7mnh1i2QHhb+Kgrj9vsEJttT8caKF++3sZ/XlOZfkmFzwgZ5 jOvQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605; h=to:subject:message-id:date:from:in-reply-to:references:mime-version :dkim-signature; bh=R9Hdb1IrGcdyaBgdr1JCPmcazEImyB8MEn2GO03CHu0=; fh=K9ifm6D2uT4MaGpRxyHMPWkA+7pSAVg8nrUoZHA/ibA=; b=ckUF/Rz2mdzNLl9DqUziv0ZI7pl/9SMr/YEuz7iKYwuvH9PwtM9mKMMeypLcC3llns eBeoXkdv1ovC1QF2SL5qjuc08B8eNceJ+tfBR6AOy8ZoRt88evzS7prV4NYxpqd4w/8Z UhVKw7RXEkg+yqwFcRli9tjlp/xTTaOFkgLJKjPiGsbVh//zIQ4VPeBuJvc7OW9Y9kRF TRAmBD3DAYEwOTL7zRycY68/U08SnVCWJMhtwNFr7/MdFsDPRlOnQRPqv1SVhZVO4+oH xCzqA2vjKBp5+luXTW0tAQROk3ZVflAZU8DFoZ6Pv9MSb8QtzBlY7dEKiBZuLq1SaUYO iB/Q==; dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; dkim=pass header.i=@kw.com header.s=google-feb2017 header.b=mZ1LrldU; spf=pass (google.com: domain of amelia.campbell@kw.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=amelia.campbell@kw.com; dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=kw.com; dara=pass header.i=@gmail.com
+Return-Path: <amelia.campbell@kw.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41]) by mx.google.com with SMTPS id a1e0cc1a2514c-84f5c934909sor140358241.6.2024.10.04.16.10.05 for <[email removed]> (Google Transport Security); Fri, 04 Oct 2024 16:10:05 -0700 (PDT)
+Received-SPF: pass (google.com: domain of amelia.campbell@kw.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=kw.com; s=google-feb2017; t=1728083404; x=1728688204; dara=google.com; h=to:subject:message-id:date:from:in-reply-to:references:mime-version :from:to:cc:subject:date:message-id:reply-to; bh=R9Hdb1IrGcdyaBgdr1JCPmcazEImyB8MEn2GO03CHu0=; b=mZ1LrldUbsLD/D43amq8hKtU0qesCDxaM1cop7PdFqSOtIsEg0YTwYtPHf3qbkITDp sxTCaTKah9Tzo3DiyODz1otgWK3akIjottxKHbp5fkHN6Glj1UwZwyxpiMmGcH3/ksyO Gp9dbt0zNaWvsYnk9V91d7hYelCtgyA1eqQHFAV69o6lFqq70oCmzDFlkgQyWPEi+sQz N5yVptCUPekj5QRGsuZ69Orff6vCZIHjDH1M0dMD6PM79HngzSNw1ILICN7uSuk+zPbN dWkN3S5N4WlidiWr2gYyXqZf4mFa48vkHSPzRJeSoUVv6JKcWNuNrBv69YQNEfy17cY3 iDww==
+X-Google-Smtp-Source: AGHT+IHPPOYK0ki8rzpqKUcoASKFct/3ZsdJwYbwIIYs2ByMObtPYQx2IPP6kscpDisVRclQw4qWFz5DVZNHmMm2jEE=
+X-Received: by 2002:a05:6122:2514:b0:509:197b:3e6 with SMTP id 71dfb90a1353d-50c8547bebcmr4741915e0c.6.1728083404321; Fri, 04 Oct 2024 16:10:04 -0700 (PDT)
+References: <CAA_qyJz43xJQ1Av8MO1nMbkMZCOJQeeN8auMgdG-+Gbm4KF9Ew@mail.gmail.com> <BY5PR14MB38930A95BCEB03E1CCC18F92A09E2@BY5PR14MB3893.namprd14.prod.outlook.com>
+In-Reply-To: <BY5PR14MB38930A95BCEB03E1CCC18F92A09E2@BY5PR14MB3893.namprd14.prod.outlook.com>
+From: Amelia Campbell <amelia.campbell@kw.com>
+Date: Fri, 4 Oct 2024 16:09:52 -0700
+Message-ID: <CAA_qyJyC7iqK+_-LGBeAqRPqBsN=LrywoTRU4ucFp_JmLxSTJg@mail.gmail.com>
+Subject: Fwd: Application link
+To: Eric Hill <[email removed]>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+--- decoded text/plain part ---
+Hi Eric,
+
+Here is Angies application link. Fill out as much as you can- she will of
+course need more moving forward, but this gives us a good starting point.
+
+I will reach out in a couple days if I haven't heard anything.
+
+Amelia
+
+
+---------- Forwarded message ---------
+From: Angela Vandenhaak <angela@legacyteam.loans>
+Date: Fri, Sep 6, 2024 at 9:48 AM
+Subject: Re: Application link
+To: Amelia Campbell <amelia.campbell@kw.com>
+
+
+Hi Amelia,
+Here is my standard language I send to clients who want to get pre
+approved. Feel free to forward this to your clients or if you want to just
+do an email (or text) introduction I can reply with this information
+directly to your clients.
+Thank you!
+Angie
+
+
+Hi!
+I would love to help you get pre-approved so you can be prepared to put an
+offer on a home when you find one that you love! The first step is to fill
+out an online loan application. You can follow this secure link:
+ LegacyTeamApplicationLink <https://1799965.my1003app.com/>
+
+You will first be asked to create a login w/NationWide Loans (that is the
+name of our parent company) and then it will take you to an application. It
+should just take about five to ten minutes to complete. Do the best you
+can, but it is just fine if you need to skip a few things-I can
+always update the application on my end if you need to add anything later!
+
+As a mortgage brokerage, we have access to over fifty different lenders and
+will use the information provided via this application to pre-approve you
+and match you up with the best loan for you and your desired property.
+
+Please feel free to reach out any time with questions.
+
+Thank you!
+Angie
+
+*Angela Vandenhaak*
+Loan Originator NMLS #2429742
+
+THE LEGACY TEAM Powered by Nationwide Loans, Inc.
+
+4260 Cordata Pkwy, Suite 101, Bellingham, WA 98226
+
+E: angela@legacyteam.loans
+
+P:[phone removed] | F:[phone removed]
+
+*Leave us a review!
+<https://www.google.com/search?q=home+financial+-+legacy+team+(bellingham)&rlz=1C1GCEU_enUS1045US1046&oq=home+financial+-+legacy+team+(bellingham)&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTEwNDMxajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x5485a3d4c72d82df:0x69a61da89d8efd25,1,,,,>*
+
+www.legacyteam.loans
+
+
+------------------------------
+*From:* Amelia Campbell <amelia.campbell@kw.com>
+*Sent:* Thursday, September 5, 2024 8:49 PM
+*To:* angela@legacyteam.loans <angela@legacyteam.loans>
+*Subject:* Application link
+
+Hi! This is my new email address. Can you send me your application link
+again- I have a client I'm sending your way.
+
+-- 
+
+
+
+--
+
+
+
+--- decoded text/html part ---
+<div dir="ltr">Hi Eric,<div><br></div><div>Here is Angies application link. Fill out as much as you can- she will of course need more moving forward, but this gives us a good starting point.</div><div><br></div><div>I will reach out in a couple days if I haven&#39;t heard anything.</div><div><br></div><div>Amelia</div><div><br><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">---------- Forwarded message ---------<br>From: <strong class="gmail_sendername" dir="auto">Angela Vandenhaak</strong> <span dir="auto">&lt;angela@legacyteam.loans&gt;</span><br>Date: Fri, Sep 6, 2024 at 9:48 AM<br>Subject: Re: Application link<br>To: Amelia Campbell &lt;<a href="mailto:amelia.campbell@kw.com">amelia.campbell@kw.com</a>&gt;<br></div><br><br><div class="msg1972575947413713952">
+
+
+
+
+<div dir="ltr">
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+Hi Amelia,</div>
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+Here is my standard language I send to clients who want to get pre approved. Feel free to forward this to your clients or if you want to just do an email (or text) introduction I can reply with this information directly to your clients.</div>
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+Thank you!</div>
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+Angie</div>
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+<br>
+</div>
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+<br>
+</div>
+<div style="text-align:left;text-indent:0px;margin:0px;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+Hi!</div>
+<div style="text-align:left;text-indent:0px;line-height:normal;margin:0in;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+I would love to help you get pre-approved so you can be prepared to put an offer on a home when you find one that you love! The first step is to fill out an online loan application. You can follow this secure link: </div>
+<div style="text-align:left;text-indent:0px;line-height:normal;margin:0in;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+ <span style="color:rgb(17,85,204)"><a href="https://1799965.my1003app.com/" id="m_1972575947413713952OWA1b260210-9aca-bbc4-d295-2f331b9e1352" style="color:rgb(17,85,204);margin:0px" target="_blank">LegacyTeamApplicationLink</a></span> </div>
+<div style="text-align:left;text-indent:0px;line-height:normal;margin:0in;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+ </div>
+<div style="text-align:left;text-indent:0px;line-height:normal;margin:0in;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+You will first be asked to create a login w/NationWide Loans (that is the name of our parent company) and then it will take you to an application. It should just take about five to ten minutes to complete. Do the best you can, but it is just fine if you need
+ to skip a few things-I can always update the application on my end if you need to add anything later! </div>
+<div style="text-align:left;text-indent:0px;line-height:normal;margin:0in;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+<br>
+</div>
+<div style="text-align:left;text-indent:0px;line-height:normal;margin:0in;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+As a mortgage brokerage, we have access to over fifty different lenders and will use the information provided via this application to pre-approve you and match you up with the best loan for you and your desired property. </div>
+<div style="text-align:left;text-indent:0px;line-height:normal;margin:0in;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+  </div>
+<div style="text-align:left;text-indent:0px;line-height:normal;margin:0in;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+Please feel free to reach out any time with questions. </div>
+<div style="text-align:left;text-indent:0px;line-height:normal;margin:0in;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+  </div>
+<div style="text-align:left;text-indent:0px;line-height:normal;margin:0in;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+Thank you! </div>
+<div style="text-align:left;text-indent:0px;line-height:normal;margin:0in;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+Angie </div>
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+<br>
+</div>
+<div id="m_1972575947413713952Signature">
+<div style="font-family:Montserrat,sans-serif,serif,EmojiFont;font-size:13.3333px;color:rgb(44,50,102)">
+<i><img id="m_1972575947413713952image_0" width="121" height="151" style="width:121px;height:151px" src="cid:ii_19259ca071823d72c3c1"></i></div>
+<div style="font-family:Montserrat,sans-serif,serif,EmojiFont;font-size:13.3333px;color:rgb(44,50,102)">
+<span style="background-color:rgb(255,255,255)"><i>Angela Vandenhaak</i></span></div>
+<div style="font-family:Montserrat,sans-serif,serif,EmojiFont;font-size:10.6667px;color:rgb(88,188,90)">
+<span style="background-color:rgb(255,255,255);font-weight:700">Loan Originator NMLS #2429742</span></div>
+<p style="margin-top:0px;margin-bottom:0px"><span style="font-family:Montserrat,sans-serif,serif,EmojiFont;font-size:8pt;color:rgb(0,0,0);font-weight:700">THE LEGACY TEAM Powered by Nationwide Loans, Inc.</span></p>
+<p style="direction:ltr;text-align:left;text-indent:0px;line-height:1.9872;background-color:rgb(255,255,255);margin-top:0pt;margin-bottom:0pt">
+<span style="font-family:Montserrat,sans-serif,serif,EmojiFont;font-size:8pt;color:rgb(0,0,0)">4260 Cordata Pkwy, Suite 101, Bellingham, WA 98226</span></p>
+<p style="direction:ltr;text-align:left;text-indent:0px;line-height:1.9872;background-color:rgb(255,255,255);margin-top:0pt;margin-bottom:0pt">
+<span style="font-family:Montserrat,sans-serif,serif,EmojiFont;font-size:8pt;color:rgb(88,188,90);font-weight:700">E:</span><span style="font-family:Montserrat,sans-serif,serif,EmojiFont;font-size:8pt;color:rgb(0,0,0);font-weight:700"> </span><span style="font-family:Montserrat,sans-serif,serif,EmojiFont;font-size:8pt;color:rgb(0,0,0)">angela@legacyteam.loans</span></p>
+<p style="direction:ltr;text-align:left;text-indent:0px;line-height:1.9872;background-color:rgb(255,255,255);margin-top:0pt;margin-bottom:0pt">
+<span style="font-family:Montserrat,sans-serif,serif,EmojiFont;font-size:8pt;color:rgb(88,188,90);font-weight:700">P:</span><span style="font-family:Montserrat,sans-serif,serif,EmojiFont;font-size:8pt;color:rgb(88,188,90)"> </span><span style="font-family:Montserrat,sans-serif,serif,EmojiFont;font-size:8pt;color:rgb(0,0,0)">[phone removed]
+ | </span><span style="font-family:Montserrat,sans-serif,serif,EmojiFont;font-size:8pt;color:rgb(88,188,90);font-weight:700">F:
+</span><span style="font-family:Montserrat,sans-serif,serif,EmojiFont;font-size:8pt;color:rgb(0,0,0)">[phone removed]</span></p>
+<p style="direction:ltr;text-align:left;text-indent:0px;line-height:1.9872;background-color:rgb(255,255,255);margin-top:0pt;margin-bottom:0pt">
+<span style="font-family:Montserrat,sans-serif,serif,EmojiFont;font-size:8pt;color:rgb(17,85,204)"><i><a href="https://www.google.com/search?q=home+financial+-+legacy+team+(bellingham)&amp;rlz=1C1GCEU_enUS1045US1046&amp;oq=home+financial+-+legacy+team+(bellingham)&amp;gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTEwNDMxajBqN6gCALACAA&amp;sourceid=chrome&amp;ie=UTF-8#lrd=0x5485a3d4c72d82df:0x69a61da89d8efd25,1,,,," id="m_1972575947413713952x_m_66957034885145202OWA394454fc-84b9-e5c6-be1a-678078d3c2d9" style="color:rgb(17,85,204);margin:0px" target="_blank">Leave
+ us a review!</a></i></span></p>
+<p style="direction:ltr;text-align:left;text-indent:0px;line-height:1.9872;background-color:rgb(255,255,255);margin-top:0pt;margin-bottom:0pt">
+<span style="font-family:Montserrat,sans-serif,serif,EmojiFont;font-size:8pt;color:rgb(17,85,204);background-color:rgb(249,251,253);font-weight:700"><a href="http://www.legacyteam.loans/" id="m_1972575947413713952x_m_66957034885145202OWA512004e5-edc6-a429-48a3-908196da0199" style="color:rgb(17,85,204);margin:0px" target="_blank">www.legacyteam.loans</a></span></p>
+<div style="font-family:Montserrat,sans-serif,serif,EmojiFont;font-size:10.6667px;color:rgb(88,188,90)">
+<span style="background-color:rgb(255,255,255)"><br>
+</span><span style="background-color:rgb(255,255,255);font-weight:700"><br>
+</span></div>
+</div>
+<div id="m_1972575947413713952appendonsend"></div>
+<hr style="display:inline-block;width:98%">
+<div id="m_1972575947413713952divRplyFwdMsg" dir="ltr"><font face="Calibri, sans-serif" style="font-size:11pt" color="#000000"><b>From:</b> Amelia Campbell &lt;<a href="mailto:amelia.campbell@kw.com" target="_blank">amelia.campbell@kw.com</a>&gt;<br>
+<b>Sent:</b> Thursday, September 5, 2024 8:49 PM<br>
+<b>To:</b> angela@legacyteam.loans &lt;angela@legacyteam.loans&gt;<br>
+<b>Subject:</b> Application link</font>
+<div> </div>
+</div>
+<div>
+<div dir="ltr">Hi! This is my new email address. Can you send me your application link again- I have a client I&#39;m sending your way.<br clear="all">
+<div><br>
+</div>
+<span>-- </span><br>
+<div dir="ltr" data-smartmail="gmail_signature">
+<div dir="ltr"><img width="420" height="140" src="https://i.imgur.com/hr7f09q.png"><br>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div></div><br clear="all"><div><br></div><span class="gmail_signature_prefix">-- </span><br><div dir="ltr" class="gmail_signature" data-smartmail="gmail_signature"><div dir="ltr"><img src="https://i.imgur.com/hr7f09q.png" width="420" height="140"><br></div></div></div></div>
+
