@@ -42,7 +42,7 @@ issues in his complaint (File #739578). Key developments:
 ### File **739578** — Cedar Lane Mobile Estates LLC
 
 Letter dated **October 19, 2026**, from ATG MI CP MHLT <CPMHLT@atg.wa.gov>,
-addressed to Eric Matthew Hill, Cedar Lane Mobile Estates, Sedro-Woolley, WA, Lot 24, Sedro Woolley, WA 98284.
+addressed to Eric Matthew Hill, Cedar Lane Mobile Estates, Lot 24, Sedro-Woolley, WA 98284.
 
 > "The Manufactured Housing Dispute Resolution Program (the Program) received the
 > complaint you filed alleging Cedar Lane Mobile Estates LLC may not be in

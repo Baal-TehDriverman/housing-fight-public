@@ -3,7 +3,7 @@
 **Prepared for counsel's first read. This guide is not a filing, not legal
 advice, and not evidence. It points at evidence; it does not replace it.**
 
-**Repo:** `Baal-TehDriverman/housing-fight` (private, main branch).
+**Repo:** `Baal-TehDriverman/housing-fight-public` (sanitized public copy, main branch).
 **Review date:** October 28, 2026. **Review scope:** the full repo as it stood
 on that date — README, all 7 files in `emails/`, all 23 files in `notes/`,
 both files in `flyers/`, all folder READMEs, and the evidence itself where
@@ -26,10 +26,11 @@ this guide states the evidence and the disagreement; it does not silently
 prefer one.
 
 **Privacy — read before forwarding anything from this repo:**
-- The six U.S. Bank statement PDFs in `statements/` contain the FULL account
-  number in their text layer. The repo is private, but any copy sent outside
-  a privileged channel must be redacted first. This guide cites only
-  "ending 9876."
+- The six U.S. Bank statement PDFs are WITHHELD from this public copy
+  (their full account number sits in the PDFs' text layer). Only the two
+  October 2026 statement photos remain in `statements/`. The full statements
+  remain in the private file and are available to counsel on request. This
+  guide cites only "ending 9876."
 - The Amelia Campbell Messenger thread (Sep 26, 2026) contains health-related
   statements by Eric. Handle accordingly; this guide does not quote them.
 - The repo contains no Social Security numbers, no medical records, and no
@@ -326,6 +327,9 @@ fraud accusation to her (see §6).
 ---
 
 ## 5. The claims, graded honestly
+
+A consolidated, status-tagged list of the statutes and legal theories in this case lives in [`violations/`](violations/) (`violations/landlord-side.md` and `violations/home-seller-side.md`). This section grades them; the violations folder is the working list for counsel.
+
 
 ### Strong — documents carry these
 
@@ -763,9 +767,10 @@ fraud accusation to her (see §6).
   the rental agreement by their own terms), new-tenant info sheet,
   Orca application, prescreening application (blank form — the
   handwritten version is in the 2024-11-01-pre-screening folder).
-- `statements/` — 6 U.S. Bank statements (Oct 2024–Mar 2025;
-  full account number in the text layer — redact before
-  forwarding) + 2 October 2026 statement photos.
+- `statements/` — 2 October 2026 statement photos only. The 6 U.S.
+  Bank statements (Oct 2024–Mar 2025; full account number in the
+  text layer) are withheld from this public copy and available to
+  counsel on request.
 - `emails/` — 7 thread summaries (4 from 2024, 3 from 2026).
   Note: the Oct 16 AG letter, the Oct 19 AG letter, Eric's Oct 16
   Legal Aid request emails, and the Oct 14 bounce email are NOT

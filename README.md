@@ -83,6 +83,10 @@ Full texts in [`emails/`](emails/):
 - [`notes/bank-records-summary.md`](notes/bank-records-summary.md) — U.S. Bank statements analysis: move-in money, the $5,510 withdrawal, monthly cash pattern.
 - [`statements/`](statements/) — six original U.S. Bank statements (Oct 2024 – Mar 2025), checking ...9876.
 
+## Violations (laws we think they broke)
+
+Consolidated list of statutes and legal theories identified in this case file: [`violations/`](violations/) — `violations/landlord-side.md` (Cedar Lane / Hurst & Son) and `violations/home-seller-side.md` (Ron'Cal Homes). Status-tagged (VERIFIED / ALLEGED / CANDIDATE / NOT ESTABLISHED). Review-only; nothing filed.
+
 ## What's missing
 
 - ~~Executed Cedar Lane lot lease~~ — **RECEIVED 2026-10-24** from Hurst & Son, OCR'd. See `attachments/2026-10-24-hurst-son-response/`.

@@ -1,7 +1,7 @@
 # Cedar Lane home-turnover study
 
 Question: "A lot of real estate go through this park?"
-Park: Cedar Lane Mobile Estates, Cedar Lane Mobile Estates, Sedro-Woolley, WA, Sedro-Woolley WA.
+Park: Cedar Lane Mobile Estates, Sedro-Woolley, WA.
 Land parcel: P67822 (CEDAR LANE MOBILE ESTATES LLC), 47 spaces per assessor.
 Compiled: 2026-09-25. Source: Skagit County Assessor public property pages, read via parcel ID.
 

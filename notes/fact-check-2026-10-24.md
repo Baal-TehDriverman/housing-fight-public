@@ -44,7 +44,7 @@ From the executed lease (Hurst & Son's 2026-10-24 production), read directly
 
 | Field | Value |
 |---|---|
-| Landlord | Cedar Lane Mobile Estates LLC, Cedar Lane Mobile Estates, Sedro-Woolley, WA, Sedro-Woolley, WA 98284 |
+| Landlord | Cedar Lane Mobile Estates LLC, Cedar Lane Mobile Estates, Sedro-Woolley, WA 98284 |
 | Tenant | Eric Hill |
 | Lot | **#24** |
 | Rent | **$850.00 / month** |

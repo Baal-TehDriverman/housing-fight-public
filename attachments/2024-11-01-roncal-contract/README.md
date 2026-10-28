@@ -14,7 +14,7 @@ contract.
 - Title: **LEASE WITH OPTION TO PURCHASE**, dated the 1st day of
   November 2024.
 - Lessor: **Ron 'Cal' Homes, LLC, "whose address is Cedar Lane Mobile
-  Estates LLC, Cedar Lane Mobile Estates, Sedro-Woolley, WA, Sedro-Woolley, WA 98284"** — the home
+  Estates LLC, Cedar Lane Mobile Estates, Sedro-Woolley, WA 98284"** — the home
   seller's contract address IS the land landlord. (Note the contract
   spells "Peavy Rd"; other documents spell "Peavey Rd.")
 - Lessee: Eric Hill, Cedar Lane Mobile Estates, Sedro-Woolley, WA TRLR 24, Sedro-Woolley, WA 98284.
