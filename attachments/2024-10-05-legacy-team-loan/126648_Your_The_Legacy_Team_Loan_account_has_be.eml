@@ -1,0 +1,309 @@
+Delivered-To: [email removed]
+Received: by 2002:ab3:5e05:0:b0:274:946:8a26 with SMTP id w5csp1192817ltb;
+        Sat, 5 Oct 2024 12:11:59 -0700 (PDT)
+X-Forwarded-Encrypted: i=4; AJvYcCVtoX+hsCLxxDklu+f1vi+dmgNR2tggQJNypWIycfxDPHqYWrl3PYxPcAbvHGfsBNUB7AmMhuiOiBbsd34Ewg==@gmail.com
+X-Received: by 2002:a05:6871:892:b0:270:6ec0:c00 with SMTP id 586e51a60fabf-287c1da6204mr5129672fac.12.1728155518710;
+        Sat, 05 Oct 2024 12:11:58 -0700 (PDT)
+ARC-Seal: i=3; a=rsa-sha256; t=1728155518; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=gqQtxyWGpOdGTitk3bXU+i1NJuTPLCsr18WWDZHrp8ciq29mwxeQeZGIBMRBjBKBIu
+         zwnI9copHdHlJ74og/rWOUvpTQ7JyVBlSF3kC/lEhLMV/AUgiDy8UnQndX0aFL19ocmS
+         Qn+JZ0GOhlrpo3asEVp1LbUbjd03/gzHPNb32oiJHsDdOxz01tt/FtQT5beomuiafL/C
+         dvCFSLVCDpkKESZ7xLlzFR6FCvQexmo4HZseWGauvSQ/Fx7hlR8v5gS5fS1oXA3tnYOt
+         eERs36yPAL5GbsVF5AePDnBmsp8m3XBwDT8vXAtMRayZ47Z8S9S0z9EagJcw9rm+4Olj
+         2quA==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:reply-to:from:mime-version
+         :dkim-signature:delivered-to;
+        bh=PSQEqsdsDNbCYIlR27xS2bsEBbFAnLigNJl1LOG6SQ4=;
+        fh=f6GIoGGEdDoNPx2DW1E9siK4cbLE9yAPfT3nBmtrPn8=;
+        b=ELPY7/hvEYkOIH1kjid2m/H8pLgk5e5mfn9yduseK5N9/RSDnh3nH5Ft4aWUPy0kzv
+         xhc4xUtav4Opu3FN7fLN0WC9aKkwsiGj6kRdaM2EFccVIoqvgkDfC0C2hep/lNjYiRqE
+         YDsLwQcJ5Eip2BxKyIszbhDB5CnCyVJwddpiBpAab9dd6hBJW7AhfNAKjjESnukzqP3x
+         mW4Piosj7RmOZXn7wrgMQAPa8NOLjWdw++xINv54zgLCklpfRrCIC1uq0DwO2cQ5Ee2C
+         0gdfxVyak9v/ytygOz3oap4GbW0/x0l0yGTapydAyh6ztMNMOT7KFIbyPf1mk3DAsA0Q
+         MLlg==;
+        dara=google.com
+ARC-Authentication-Results: i=3; mx.google.com;
+       dkim=pass header.i=@legacyteam-loans.20230601.gappssmtp.com header.s=20230601 header.b=kiPieYVE;
+       arc=pass (i=2 spf=pass spfdomain=legacyteam.loans dkim=pass dkdomain=legacyteam-loans.20230601.gappssmtp.com dmarc=pass fromdomain=legacyteam.loans);
+       spf=pass (google.com: domain of [email removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom="[email removed]";
+       dmarc=fail (p=NONE sp=NONE dis=NONE arc=pass) header.from=legacyteam.loans;
+       dara=pass header.i=@gmail.com
+Return-Path: <[email removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 586e51a60fabf-287d723d16asor445790fac.10.2024.10.05.12.11.58
+        for <[email removed]>
+        (Google Transport Security);
+        Sat, 05 Oct 2024 12:11:58 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [email removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@legacyteam-loans.20230601.gappssmtp.com header.s=20230601 header.b=kiPieYVE;
+       arc=pass (i=2 spf=pass spfdomain=legacyteam.loans dkim=pass dkdomain=legacyteam-loans.20230601.gappssmtp.com dmarc=pass fromdomain=legacyteam.loans);
+       spf=pass (google.com: domain of [email removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom="[email removed]";
+       dmarc=fail (p=NONE sp=NONE dis=NONE arc=pass) header.from=legacyteam.loans;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=2; a=rsa-sha256; t=1728155518; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=O/5dVkseounY5YmWyvGA49HzynBNiJTF6FaC2z1lUSMl986/ppCwHkBBioUy/Lb8Tp
+         589dmYzDwvMzBmM1kpFnWYZVR+S5BO4dA+J6jHWAyIMIPyl0YCyO1hCgthipGPNsY4LB
+         RQn5A0lgeZRfGQ/OnXS0xEWVpQTtzxW5iVBB68BIWG/snSjt7+y8Vqje9FDS8jr6J2Ld
+         q3lRJtUPwE7yZE7Z9cdGu2dqrffeDH282UoJgz+wl6xeO3MMjiBO2+1rMn5Ch1MmI8Zc
+         uW8xlYYss2TM6AtgFexUegWrghWQS3vTy0WpQv01Pgcwy/adHj6akHpYJd/NW9Ebjc5e
+         eyXA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:reply-to:from:mime-version
+         :dkim-signature:delivered-to;
+        bh=PSQEqsdsDNbCYIlR27xS2bsEBbFAnLigNJl1LOG6SQ4=;
+        fh=f6GIoGGEdDoNPx2DW1E9siK4cbLE9yAPfT3nBmtrPn8=;
+        b=GKt4Y3Ai2fQjcOCwlyiD5KJHWd6q3lshjlK1HrI8MRJJx+3YqeXFExtLVXIKZC6kYl
+         TwMN6YXMQlmnBxa0Ee1vJ8TgOAszY2J5iAbs133B75oLxC+CTxhNucKC1dXgRw6yQtLi
+         WSaSIc3RXQQw/gTZW1vcwXbsM+ffBCj2Z8ehvBN5RDEt/nhh4i4m5Y2vgwFgWKjANk2J
+         dQ8lcSZYfq+Il1AVP4y1kqo9YBWZLU+8Omd2QKr48ZdISHt02FsIyiu5V9mxfsQ6cXE9
+         sVVGC7IOmaYADvmt5GuASw03JYvSw5IDEch7lmBmpS1d1S1SoK4Xr/CchfNNsiuhRLb8
+         DStQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@legacyteam-loans.20230601.gappssmtp.com header.s=20230601 header.b=kiPieYVE;
+       spf=pass (google.com: domain of angela@legacyteam.loans designates 209.85.220.41 as permitted sender) smtp.mailfrom=angela@legacyteam.loans;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=legacyteam.loans;
+       dara=pass header.i=@gmail.com
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1728155518; x=1728760318;
+        h=to:subject:message-id:date:reply-to:from:mime-version
+         :dkim-signature:delivered-to:x-forwarded-for:x-forwarded-to
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=PSQEqsdsDNbCYIlR27xS2bsEBbFAnLigNJl1LOG6SQ4=;
+        b=pt9LIykeSw9RwMi9/Dca1/BCr4qbwX0gYwY3H7FPDUgt6Vocg23wX/kk/1r388FiN1
+         0QWIB0QZUpE4VhtscrZYB+hzk0OKdI8JaJXCaYRdYkEMpNPp+Ypa7kvkwxYWWvDz+A6f
+         /igSP6gyl+Gyhwyjkx5URJ2Dt9qIc73m0vRWpdYFUEIKLjEEeEjeo2mCSqnS2JUfbXQ1
+         MdC7PDdN41S+SFC/s73j/C8FwZlqPcnXztIzmn/Zt812KaUtQJUUKD1nUOyMW5FPjM/s
+         bEPWlP3vL8vWCukwTDR3cdTjmW2p10AtupX+tyTTyTHL9k3/Xw/QC8LM+KMZgWjWa0+y
+         7AvA==
+X-Forwarded-Encrypted: i=2; AJvYcCVkg4oi/u2HSMKvBPiVLBspvDbaWRwOZtIDZLfrnbYOGB9xIB9pyC0bPcZJEL2YQ2m/GPHNaYGQ3hPQrXa5yQ==@gmail.com
+X-Gm-Message-State: AOJu0Yx1wfBlj6Fv0ULc+/FJw0GCatD637+zrUnlaey5ZA5GvOPzOup9
+	J6LrDQaiLXknhgY0H0rKpDeMFW22Zt7CHK58Iuyjfm6B8tX3rOr5Ft4hVCygJpfC7ewvc+PUkuT
+	KK15fI39pZTaNdB1n4qx6KEW0tiqNe9ZUobUDsG5Cy+EAFC3OOFajQ7b7jw==
+X-Received: by 2002:a05:6871:24e0:b0:277:e99b:45be with SMTP id 586e51a60fabf-287c1e15a63mr4681402fac.24.1728155518232;
+        Sat, 05 Oct 2024 12:11:58 -0700 (PDT)
+X-Forwarded-To: [email removed]
+X-Forwarded-For: [email removed] [email removed]
+Delivered-To: [email removed]
+Received: by 2002:a17:504:8004:b0:1be7:bb18:5301 with SMTP id c4csp1050839njh;
+        Sat, 5 Oct 2024 12:11:56 -0700 (PDT)
+X-Received: by 2002:a05:620a:4706:b0:7a1:d973:ca46 with SMTP id af79cd13be357-7ae6f494f69mr912695285a.61.1728155516284;
+        Sat, 05 Oct 2024 12:11:56 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1728155516; cv=none;
+        d=google.com; s=arc-20240605;
+        b=eouInF0INCucZSKrcSegcHoHwno6Qol8nSqsp1R1GNVwkEx2CHprjiG2ph8gmu9lQF
+         Eal5Dly7RFqe3D9NLdqg8vIR3Mx69h9Db1r/l2xqUuQSH+Ia4nySMv7WhZUbsAAdYfxJ
+         TY56cuyMW8X/8Z45NSdmpmbjWFDiyiix7xDCvK0Tq+d0GS86b9IzcRa/rbzXS1a9relM
+         NDq2i1HlwARh1BHQ01Y7Rk1az+9O1mpbloe+RzWelvx3Q8BGv6y9GdYLmFTXsjnmga3/
+         c0ln5oes8E2MdIiTa73vpnDECfdSSoumwSdee2CFfMw0ZvPyhF/nv8HxI/awgVmkk6lB
+         05Lg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:reply-to:from:mime-version
+         :dkim-signature;
+        bh=PSQEqsdsDNbCYIlR27xS2bsEBbFAnLigNJl1LOG6SQ4=;
+        fh=qWvO/NzLHPkDXu16L5r1li2MQ848Y9exIQSdGgQreSo=;
+        b=XDFsj+bJoC21halMCE60qzqnJRAoQyFnxrt0xygEEG/6gV++eqvc+0FxkkT/QdfmP4
+         rhm5In6vocwZI+W5WoOIWjdu7F0xOmYDS61vxmb/F0qj828BQASXClXUgpZO/BnUPlQR
+         701spP1ttZSMQi3JKEOHklMy3jXv14X/j5LaFs0cNcZWSFrQMWB5Dr/JM953pp3t5RGL
+         5uQeviymElqKqNWFRQGVlff0D70CGq10ZNdUkFZfDfQ8vi39D9W8eqGNdDPvz0iTzpSa
+         6G1CbWbNWZZWlDQ5RPm4KobshB19IfmO4pSsb6uUHfzmp+Z1HbJKp5jDe4m5H2IW73u5
+         6yng==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@legacyteam-loans.20230601.gappssmtp.com header.s=20230601 header.b=kiPieYVE;
+       spf=pass (google.com: domain of angela@legacyteam.loans designates 209.85.220.41 as permitted sender) smtp.mailfrom=angela@legacyteam.loans;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=legacyteam.loans;
+       dara=pass header.i=@gmail.com
+Return-Path: <angela@legacyteam.loans>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id af79cd13be357-7ae757652absor177999985a.18.2024.10.05.12.11.56
+        for <[email removed]>
+        (Google Transport Security);
+        Sat, 05 Oct 2024 12:11:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of angela@legacyteam.loans designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=legacyteam-loans.20230601.gappssmtp.com; s=20230601; t=1728155515; x=1728760315; dara=google.com;
+        h=to:subject:message-id:date:reply-to:from:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=PSQEqsdsDNbCYIlR27xS2bsEBbFAnLigNJl1LOG6SQ4=;
+        b=kiPieYVEq+QHFYQXKPQUefezcJGB+oxxhwWja1mosA1roDgi74iKPNZFMY7mSu5V0Z
+         wEjnsX6k4TMSDUumNaq7QEtEVH/9lM5JSN57LDEMfwr5wglf5TgJVAm2Jz7aSZBleisL
+         vOyqwLAtyVkN8OvyiJ7Q51nmzgldjk6bhfzbWC1DFcfDKaFxx9S0ttenoCDo8TQEwUKU
+         vPMiJUnbw6E3sfY2jOe3Y4TxAA/9dZbOcVesx9r317x1kvttbEkfcQ7nifb9a6TEf+2k
+         +72t88sDe0yB3CVnhD7Kozqv0TYK6CCu6d0jyGRruoo/Hsfr72g+Ajf9xqBug3c8iLeO
+         E6oA==
+X-Google-Smtp-Source: AGHT+IG4ZirA7lm6DMqjHjll1Psf6O/2qy4qS/NMdgp4gBmZlEpVuxCSHFJIWQ3VZEzqUSShaVC0gSZ7RDD8VSKr2Os=
+X-Received: by 2002:ac8:5d09:0:b0:45d:969f:802d with SMTP id
+ d75a77b69052e-45d9babf454mr101200321cf.31.1728155515461; Sat, 05 Oct 2024
+ 12:11:55 -0700 (PDT)
+Received: from 852457128075 named unknown by gmailapi.google.com with
+ HTTPREST; Sat, 5 Oct 2024 12:11:55 -0700
+MIME-Version: 1.0
+From: Angela Vandenhaak <angela@legacyteam.loans>
+Reply-To: Angela Vandenhaak <angela@legacyteam.loans>
+Date: Sat, 5 Oct 2024 12:11:55 -0700
+Message-ID: <CAL8a2y5cFc8o+dvJK+xe7BmfyQ8rpF6OPk2PAx42hVm1H3da5w@mail.gmail.com>
+Subject: Your The Legacy Team Loan account has been created
+To: "[email removed]" <[email removed]>
+Content-Type: multipart/alternative; boundary="0000000000009dbe090623bf8f84"
+
+--0000000000009dbe090623bf8f84
+Content-Type: text/plain; charset="UTF-8"
+
+------------------------------
+Your The Legacy Team Loan account has been created.
+
+Hello [email removed],
+
+We have created an account for you at The Legacy Team. With this account,
+you will be able to see the progress of the loan and send documents to us.
+
+You can now log in to the system using your email and password.
+Login to my account <https://1799965.my1003app.com/2429742/pos/app/13230915>
+
+If the button above is not visible, copy and paste the following link in
+the browser:
+https://1799965.my1003app.com/2429742/pos/app/13230915
+
+Sincerely,
+
+Angela Vandenhaak
+NMLS # 2429742
+[phone removed] | angela@legacyteam.loans
+------------------------------
+*The Legacy Team*
+NMLS # 1799965
+
+--0000000000009dbe090623bf8f84
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+<html class=3D"sg-campaigns">
+
+<head>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1, minimum-scale=3D1, maximum-scale=3D1">
+ =20
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3DEdge">
+ =20
+ =20
+ =20
+  <style>
+    @media only screen and (max-width: 600px) {
+      .mail-template {
+        font-size: 16px !important;
+        line-height: 22px !important;
+      }
+
+      .mail-template .footer {
+        font-size: 16px !important;
+        line-height: 22px !important;
+      }
+
+      .mail-template .line-height20 {
+        line-height: 22px !important;
+      }
+    }
+  </style>
+</head>
+
+<body style=3D"margin-top:0;padding-top:0">
+
+  <table class=3D"mail-template" style=3D"font-family:arial,helvetica,sans-=
+serif;font-size:14px;padding:0px;color:#222;max-width:600px;margin:auto;bor=
+der-collapse:collapse">
+    <tr>
+      <td>
+        <div>
+          <hr class=3D"divider top" style=3D"border:none;border-top:1px sol=
+id #eee;margin:20px 0;margin-bottom:36px;margin-top:0px;border-width:4px">
+
+          <img src=3D"https://lwapiprod.s3.amazonaws.com/6664/branchConfig/=
+logo/logo.png?v=3D1728155514839" class=3D"logo" width=3D"180" style=3D"disp=
+lay: inline-block;">
+
+         =20
+            <h1 class=3D"heading" style=3D"line-height:1.1;font-size:22px;m=
+argin:20px 0px">Your The Legacy Team Loan account has been created.</h1>
+
+            <p style=3D"line-height:1.1;margin:20px 0px">Hello <a href=3D"m=
+ailto:[email removed]">[email removed]</a>,</p>
+
+            <p style=3D"line-height:1.1;margin:20px 0px">We have created an=
+ account for you at The Legacy Team. With this account, you will be able to=
+ see the progress of the loan and send documents to us.</p>
+
+            <p style=3D"line-height:1.1;margin:20px 0px">You can now log in=
+ to the system using your email and password.</p>
+
+              <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" sty=
+le=3D"margin:20px 0px">
+                <tr>
+                  <td>
+                    <table cellspacing=3D"0" cellpadding=3D"0">
+                      <tr>
+                        <td style=3D"border-radius:6px" bgcolor=3D"#3981FF"=
+>
+                          <a href=3D"https://1799965.my1003app.com/2429742/=
+pos/app/13230915" class=3D"btn" style=3D"background-color:#3981ff;border:1p=
+x solid #3981ff;display:inline-block;border-radius:6px;color:#ffffff;font-f=
+amily:arial,helvetica,sans-serif;text-decoration:none;font-weight:700;font-=
+weight:700;padding:12px 18px 12px 18px;text-align:center">Login to my accou=
+nt</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <p class=3D"mb-4px" style=3D"line-height:1.1;margin:20px 0px;=
+margin-bottom:4px">If the button above is not visible, copy and paste the f=
+ollowing link in the browser:</p>
+              <a href=3D"https://1799965.my1003app.com/2429742/pos/app/1323=
+0915" style=3D"word-break:break-word;color:#3981ff;text-decoration:none;dis=
+play:inline-block">https://1799965.my1003app.com/2429742/pos/app/13230915</=
+a><br><br>
+
+        =20
+         =20
+<div class=3D"line-height20" style=3D"line-height:1.1;font-family:arial,hel=
+vetica,sans-serif;font-size:14px;margin:0;padding:0px;color:#222">
+  <span>Sincerely,</span><br><br>
+  <span>Angela Vandenhaak</span><br>
+    <span>NMLS # 2429742<br></span>
+    <span>[phone removed] | </span>
+  <a class=3D"Unsubscribe--unsubscribeLink" href=3D"mailto:angela@legacytea=
+m.loans" target=3D"_top" style=3D"color:#3981ff;text-decoration:none">angel=
+a@legacyteam.loans</a>
+  <br>
+</div>
+
+<hr class=3D"divider" style=3D"border:none;border-top:1px solid #eee;margin=
+:20px 0">
+
+<div class=3D"footer line-height20" style=3D"color:#666666;line-height:1.1;=
+font-family:arial,helvetica,sans-serif;font-size:14px;margin:0;padding:0px"=
+>
+  <strong>The Legacy Team</strong><br>
+    <span>NMLS # 1799965</span><br>
+  <a href=3D"" target=3D"_blank" style=3D"color:#3981ff;text-decoration:non=
+e"></a>
+  <br>
+</div>
+
+
+        </div>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
+
+--0000000000009dbe090623bf8f84--
